@@ -14,9 +14,7 @@ void init()
     glOrtho(-210,210,-220,310,-210,310);
 
 }
-//-----------------------sky------------------------------------------------------------------
 
-//-----------------------cloud-----------------------------------------------------------------
 void cloud(double x, double y)
 {
 
@@ -57,7 +55,7 @@ void sun(double x, double y)
 
 
 }
-// ------------------------------------Fence-------------------------------------------------
+
 void fence(int x)
 {
     glBegin(GL_POLYGON);
@@ -75,7 +73,7 @@ void fence(int x)
 
 }
 
-//--------------------------------------------------------------------------------------------
+
 
 
 
@@ -85,10 +83,10 @@ void displayD()
 {
 
     glClear(GL_COLOR_BUFFER_BIT);
-//-----------------------sky------------------------------------------------------------------
-    glColor3ub(135,206,250);//light blue
+
+    glColor3ub(135,206,250);//light blue //sky
         glRecti(-200,300,200,100);
-//-----------------------------------field------------------------------
+//field
     glBegin(GL_POLYGON);
         glColor3ub(0,100,0);//green
 
@@ -107,7 +105,7 @@ void displayD()
 
     glEnd();
 
-//-------------------SUN-------------------------
+//sun
     glPushMatrix();
     glColor3ub(255,215,0);
     glTranslatef(tx,0,0);
@@ -118,7 +116,7 @@ void displayD()
     if(sx>70)
     sx=-580;
 
-// ------------------------------------fence--------------------------
+// fence
     int x=0;
     for(int i=0;i<39;i++)
     {
@@ -132,7 +130,7 @@ void displayD()
     glRecti(-200,85,200,80);
 
 
-//-------------------------------------TREE------------------------
+//tree
     glColor3ub(139,69,19);//
     glRecti(-20,200,-13,140);
     glColor3ub(0,100,0);
@@ -197,7 +195,7 @@ void displayD()
         sun(-195,190);
 
 
-//-----------------------------------------------TUBEWELL-----------------------------------------
+//tubewell
 
     glBegin(GL_POLYGON);  // First part
 
@@ -280,7 +278,7 @@ void displayD()
     glRecti(123,29,127,20);
     glColor3ub(139,69,19);//saddle brown
     glRecti(118,22,132,14);
-// --------------------------------------- HOUSE one----------------------------
+// house
     glBegin(GL_POLYGON);  // first Part
         glColor3ub(128,0,0);//gray
         glVertex2i(-58,115);
@@ -345,7 +343,7 @@ void displayD()
 
 
 
-//-------------------------------------------  HOUSE  two  -------------------------------------------------
+//HOUSE  two
     glBegin(GL_POLYGON);  // First part
 
         glColor3ub(25,25,112);//midnight blue
@@ -369,11 +367,11 @@ void displayD()
     glEnd();
 
 
-//---------------------------------------Door------------------------------------------
+//Door
     glColor3ub(25,25,112);//midnight blue
     glRecti(-45,70,-30,27);
 
-//--------------------------------------------------------------------------
+
     glBegin(GL_POLYGON);   // Third part
     glColor3ub(95,158,160);//midnight blue
         glVertex2i(-10,25);
@@ -430,7 +428,7 @@ void displayD()
     glEnd();
 
 
-//------------------------------------------RIVER--------------------------------------------------
+//RIVER
     glBegin(GL_POLYGON);
         glColor3ub(30,144,255);
         glVertex2i(-200,-50);
@@ -449,7 +447,7 @@ void displayD()
         glVertex2i(-200,-45);
     glEnd();
 
-//-------------------------------------------CLOUD-------------------------------------------------
+//CLOUD
 	glPushMatrix();
 	glColor3ub(220,220,220);
     glTranslatef(tx,0,0);
@@ -470,7 +468,7 @@ void displayD()
     tx+=.01;
     if(tx>200)
     tx=-200;
-//-------------------------------------------BOAT-------------------------------------------------
+//BOAT
     glPushMatrix();
 	glColor3f(0.0f, 0.0f, 0.0f);//Black
     glTranslatef(bx,0,0);
@@ -502,7 +500,7 @@ void displayD()
     sun(-180,240);
     sun(-152,243);
 
-    //--------------------------BOAT FLAG----------------------------
+    //BOAT FLAG
     glBegin(GL_POLYGON);
         glColor3ub(173,216,230);
         glVertex2i(-57,-40);
@@ -563,7 +561,7 @@ void displayD()
 
     glEnd();
 
-//--------------------------BOAT LINE----------------------------
+//BOAT LINE
     glBegin(GL_LINE_STRIP);
         glColor3f(0.0f, 0.0f, 0.0f);//Black
         glVertex2i(-142,-62);
@@ -613,7 +611,7 @@ void displayD()
     glColor3ub(255,255,255);//
     glRecti(-210,310,-200,-210);
     glRecti(200,310,210,-210);
-//--------------------------------------------------------------------------------------------
+
     glFlush();
 }
 
@@ -622,10 +620,10 @@ void displayN()
 {
 
     glClear(GL_COLOR_BUFFER_BIT);
-//-----------------------sky------------------------------------------------------------------
-    glColor3ub(	47, 79, 79);//light blue
+//sky
+    glColor3ub(	47, 79, 79);
         glRecti(-200,300,200,100);
-//-----------------------------------field------------------------------
+//field
     glBegin(GL_POLYGON);
         glColor3ub(0,100,0);//green
 
@@ -644,7 +642,7 @@ void displayN()
 
     glEnd();
 
-//-------------------MOON-------------------------
+//MOON
     glPushMatrix();
     glColor3ub(255, 255, 255);
     glTranslatef(tx,0,0);
@@ -655,7 +653,7 @@ void displayN()
     if(sx>70)
     sx=-580;
 
-// ------------------------------------fence--------------------------
+// fence
     int x=0;
     for(int i=0;i<39;i++)
     {
@@ -669,7 +667,7 @@ void displayN()
     glRecti(-200,85,200,80);
 
 
-//-------------------------------------TREE------------------------
+//TREE
     glColor3ub(139,69,19);//
     glRecti(-20,200,-13,140);
     glColor3ub(0,100,0);
@@ -734,7 +732,7 @@ void displayN()
         sun(-195,190);
 
 
-//-----------------------------------------------TUBEWELL-----------------------------------------
+//TUBEWELL
 
     glBegin(GL_POLYGON);  // First part
 
@@ -817,7 +815,7 @@ void displayN()
     glRecti(123,29,127,20);
     glColor3ub(139,69,19);//saddle brown
     glRecti(118,22,132,14);
-// --------------------------------------- HOUSE one----------------------------
+// HOUSE one
     glBegin(GL_POLYGON);  // first Part
         glColor3ub(128,0,0);//gray
         glVertex2i(-58,115);
@@ -882,7 +880,7 @@ void displayN()
 
 
 
-//-------------------------------------------  HOUSE  two  -------------------------------------------------
+//HOUSE  two
     glBegin(GL_POLYGON);  // First part
 
         glColor3ub(25,25,112);//midnight blue
@@ -906,11 +904,11 @@ void displayN()
     glEnd();
 
 
-//---------------------------------------Door------------------------------------------
+//Door
     glColor3ub(25,25,112);//midnight blue
     glRecti(-45,70,-30,27);
 
-//--------------------------------------------------------------------------
+
     glBegin(GL_POLYGON);   // Third part
     glColor3ub(95,158,160);//midnight blue
         glVertex2i(-10,25);
@@ -967,7 +965,7 @@ void displayN()
     glEnd();
 
 
-//------------------------------------------RIVER--------------------------------------------------
+//RIVER
     glBegin(GL_POLYGON);
         glColor3ub(30,144,255);
         glVertex2i(-200,-50);
@@ -986,7 +984,7 @@ void displayN()
         glVertex2i(-200,-45);
     glEnd();
 
-//-------------------------------------------CLOUD-------------------------------------------------
+//CLOUD
 	glPushMatrix();
 	glColor3ub(220,220,220);
     glTranslatef(tx,0,0);
@@ -1007,7 +1005,7 @@ void displayN()
     tx+=.01;
     if(tx>200)
     tx=-200;
-//-------------------------------------------BOAT-------------------------------------------------
+//BOAT
     glPushMatrix();
 	glColor3f(0.0f, 0.0f, 0.0f);//Black
     glTranslatef(bx,0,0);
@@ -1039,7 +1037,7 @@ void displayN()
     sun(-180,240);
     sun(-152,243);
 
-    //--------------------------BOAT FLAG----------------------------
+    //BOAT FLAG
     glBegin(GL_POLYGON);
         glColor3ub(173,216,230);
         glVertex2i(-57,-40);
@@ -1100,7 +1098,7 @@ void displayN()
 
     glEnd();
 
-//--------------------------BOAT LINE----------------------------
+//BOAT LINE
     glBegin(GL_LINE_STRIP);
         glColor3f(0.0f, 0.0f, 0.0f);//Black
         glVertex2i(-142,-62);
@@ -1150,7 +1148,7 @@ void displayN()
     glColor3ub(255,255,255);//
     glRecti(-210,310,-200,-210);
     glRecti(200,310,210,-210);
-//--------------------------------------------------------------------------------------------
+
     glFlush();
 }
 

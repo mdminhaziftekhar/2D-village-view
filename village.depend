@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1672588041 source:c:\users\minhaz\documents\class\minhaz\village\main.cpp
+1672592502 source:c:\users\minhaz\documents\class\minhaz\village\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	<stdlib.h>
